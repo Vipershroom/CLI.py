@@ -1,10 +1,34 @@
-import os
+import os, sys
+
+"""
+parser ['command', 'args1', 'args2']
+"""
 
 def parse():
-    cwd = os.getcwd()
-    args = input(cwd + '>')
-    args = args.split(' ')
-    print(args)
+    dir = os.getcwd()
+    while True:
+        args = input(dir + '>')
+        args = args.split(' ')
+        
+        match args[0]:
+            case "cd":
+                if cd(args[1]):
+                    dir = args[1]
+                else:
+                    print("Not a directory")
+            case "exit":
+                cli_exit()
+                
+# Checks if the directory exists and returns a boolean
+def cd(dir):
+    if os.path.isdir(dir):
+        return True
+    else:
+        return False
+    
+    
+def cli_exit():
+    sys.exit(0)
     
 if __name__ == '__main__':
     import main
