@@ -18,6 +18,9 @@ def parse():
                         dir = args[1]
                     else:
                         print("Not a directory")
+
+                case "echo":
+                    echo(args)
                         
                 case "exit":
                     cli_exit()
@@ -43,7 +46,12 @@ def cd(dir):
         return True
     else:
         return False
-    
+
+def echo(msg):
+    for text in msg[1:]:
+        print(text + " ", end='')
+    print()
+
 def cli_exit():
     sys.exit(0)
     

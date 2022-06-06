@@ -8,6 +8,10 @@ Small CLI project in python
 
 Changes current directory
 
+## echo [args]
+
+Prints to the console
+
 ## exit
 
 Exits terminal
