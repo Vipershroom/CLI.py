@@ -36,6 +36,9 @@ def parse():
 
                 case "open":
                     file.open_file(dir, args[1])
+
+                case "del":
+                    file.del_file(dir, args[1])
                     
         except IndexError:
             print("Please fill in all proper arguments")

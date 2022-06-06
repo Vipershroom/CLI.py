@@ -1,4 +1,5 @@
 import os
+import errno
 
 def create_file(dir, cmdArg):
     with open(f"{dir}\{cmdArg}","w") as f:
@@ -20,8 +21,16 @@ def open_file(dir, cmdArg):
             print(line, end='')
         print()
         
-def del_file():
-    pass
+def del_file(dir, cmdArg):
+    print(f"Are you sure you would like to delete {cmdArg} in {dir}? \n(Y/n)")
+    resp = input()
+    if resp == 'n':
+        return
+    try:
+        os.remove(cmdArg)
+        print(f"File {cmdArg} deleted")
+    except (FileNotFoundError, PermissionError) as error:
+        print(f"Error deleting file, {error}")
 
 if __name__ == '__main__':
     import main

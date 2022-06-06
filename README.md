@@ -27,3 +27,10 @@ Creates a file in the current directory
 ## open [arg]
 
 Opens and reads a file line by line
+
+## del [arg]
+
+Deletes a file in the current directory
+
+WARNING! Deleting files without being careful can lead to permanent file erasure and sadness.
+I am not responsible for your stupidity.
