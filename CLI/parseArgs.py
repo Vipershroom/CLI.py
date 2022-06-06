@@ -1,5 +1,6 @@
 import os, sys
 import file
+import youtube
 
 """
 parser ['command', 'args1', 'args2']
@@ -39,6 +40,12 @@ def parse():
 
                 case "del":
                     file.del_file(dir, args[1])
+
+                case "webm":
+                    youtube.webm_download(args[1])
+
+                case "mp4":
+                    youtube.mp4_download(args[1])
                     
         except IndexError:
             print("Please fill in all proper arguments")

@@ -34,3 +34,7 @@ Deletes a file in the current directory
 
 WARNING! Deleting files without being careful can lead to permanent file erasure and sadness.
 I am not responsible for your stupidity.
+
+## webm [arg]
+
+Download a video as a webm file from YouTube
