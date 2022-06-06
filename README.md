@@ -37,4 +37,8 @@ I am not responsible for your stupidity.
 
 ## webm [arg]
 
-Download a video as a webm file from YouTube
+Download a video as a WEBM file from YouTube
+
+## mp4 [arg]
+
+Download a video as an MP4 File from YouTube
