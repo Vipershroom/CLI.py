@@ -12,10 +12,14 @@ Changes current directory
 
 Exits terminal
 
+## Clear/cls
+
+Clears the terminal
+
 ## touch [arg]
 
 Creates a file in the current directory
 
-## Clear or cls
+## open [arg]
 
-Clears the terminal
+Opens and reads a file line by line

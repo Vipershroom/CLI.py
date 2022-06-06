@@ -1,4 +1,3 @@
-from os import curdir
 import os
 from parseArgs import parse
 

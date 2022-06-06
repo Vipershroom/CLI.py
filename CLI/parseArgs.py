@@ -22,7 +22,6 @@ def parse():
                 case "exit":
                     cli_exit()
                 
-                #Clear Terminal
                 case "clear":
                     clear()
                     
@@ -31,6 +30,9 @@ def parse():
                     
                 case "touch":
                     file.create_file(dir, args[1])
+
+                case "open":
+                    file.open_file(dir, args[1])
                     
         except IndexError:
             print("Please fill in all proper arguments")
