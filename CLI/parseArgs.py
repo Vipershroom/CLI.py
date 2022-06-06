@@ -1,4 +1,5 @@
 import os, sys
+import file
 
 """
 parser ['command', 'args1', 'args2']
@@ -16,8 +17,12 @@ def parse():
                     dir = args[1]
                 else:
                     print("Not a directory")
+                    
             case "exit":
                 cli_exit()
+                
+            case "touch":
+                file.create_file(dir, args[1])
                 
 # Checks if the directory exists and returns a boolean
 def cd(dir):
@@ -25,7 +30,6 @@ def cd(dir):
         return True
     else:
         return False
-    
     
 def cli_exit():
     sys.exit(0)
