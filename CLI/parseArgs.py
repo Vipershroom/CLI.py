@@ -21,9 +21,17 @@ def parse():
                         
                 case "exit":
                     cli_exit()
+                
+                #Clear Terminal
+                case "clear":
+                    clear()
+                    
+                case "cls":
+                    clear()
                     
                 case "touch":
                     file.create_file(dir, args[1])
+                    
         except IndexError:
             print("Please fill in all proper arguments")
                 
@@ -36,6 +44,9 @@ def cd(dir):
     
 def cli_exit():
     sys.exit(0)
+    
+def clear():
+    os.system('cls||clear')
     
 if __name__ == '__main__':
     import main
