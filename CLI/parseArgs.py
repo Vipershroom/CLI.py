@@ -10,19 +10,22 @@ def parse():
     while True:
         args = input(dir + '>')
         args = args.split(' ')
-        
-        match args[0]:
-            case "cd":
-                if cd(args[1]):
-                    dir = args[1]
-                else:
-                    print("Not a directory")
+
+        try: 
+            match args[0]:
+                case "cd":
+                    if cd(args[1]):
+                        dir = args[1]
+                    else:
+                        print("Not a directory")
+                        
+                case "exit":
+                    cli_exit()
                     
-            case "exit":
-                cli_exit()
-                
-            case "touch":
-                file.create_file(dir, args[1])
+                case "touch":
+                    file.create_file(dir, args[1])
+        except IndexError:
+            print("Please fill in all proper arguments")
                 
 # Checks if the directory exists and returns a boolean
 def cd(dir):
